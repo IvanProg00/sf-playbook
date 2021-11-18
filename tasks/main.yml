@@ -1,0 +1,9 @@
+---
+- name: install vsftpd
+  apt:
+    name: vsftpd
+    state: latest
+- name: Restart service
+  ansible.builtin.service:
+    name: vsftpd
+    state: restarted
